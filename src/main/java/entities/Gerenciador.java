@@ -8,7 +8,7 @@ import java.util.List;
 
 /**
  *
- * @author EUARO
+ * @author EDUARDO
  */
 public class Gerenciador {
     private List<Despesa> despesas;
