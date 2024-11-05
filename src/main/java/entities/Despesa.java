@@ -10,7 +10,7 @@ import java.util.Locale;
 
 /**
  *
- * @author EUARO
+ * @author EDUARDO
  */
 public class Despesa {
     private LocalDate data;
