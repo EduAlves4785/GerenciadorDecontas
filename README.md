@@ -10,42 +10,55 @@ Calcular total: Calcula o total das despesas listadas.
 
 <hr>
 <pre>
-+-------------------+
-|      Program      |
-+-------------------+
-| - despesas: List<Despesa> |
-| - gerencia: Gerenciador   |
-| - exit: char              |
-+---------------------------+
-| + main(args: String[]): void |
-+---------------------------+
-             |
-             |
-             v
-+---------------------------+
-|       Gerenciador         |
-+---------------------------+
-| - despesas: List<Despesa> |
-+---------------------------+
-| + Gerenciador(despesas: List<Despesa>) |
-| + adicionarDespesa(despesa: Despesa): void |
-| + removerDespesa(indice: int): void        |
-| + listarDespesas(): void                   |
-| + calcularTotal(): Double                  |
-+---------------------------+
-             |
-             |
-             v
-+---------------------------+
-|         Despesa           |
-+---------------------------+
-| - data: LocalDate         |
-| - descricao: String       |
-| - valor: Double           |
-+---------------------------+
-| + getData(): LocalDate    |
-| + getDescricao(): String  |
-| + getValor(): Double      |
-| + toString(): String      |
-+---------------------------+
++--------------------------------+
+|           Inventario           |
++--------------------------------+
+| - produtos: List<Produto>      |
++--------------------------------+
+| - reescreveId(): int           |
+| + adicionarProduto(produto: Produto): void |
+| + removerProduto(produtoId: int): void     |
+| + listarProdutos(): void       |
+| + buscarProduto(produtoId: int): Produto   |
+| + calcularValorTotal(): double |
++--------------------------------+
+
+                    |
+                    |
+                    |
+                    ▼
+
++--------------------------------+
+|            Produto             |
++--------------------------------+
+| - id: int                      |
+| - nome: String                 |
+| - preco: double                |
+| - quantidade: int              |
++--------------------------------+
+| + getId(): int                 |
+| + getNome(): String            |
+| + getPreco(): double           |
+| + getQuantidade(): int         |
+| + setId(id: int): void         |
+| + setQuantidade(quantidade: int): void |
+| + calcularValorTotal(): double |
++--------------------------------+
+
+                    |
+                    |
+                    |
+                    ▼
+
++--------------------------------+
+|           Categoria            |
++--------------------------------+
+| - nome: String                 |
+| - descricao: String            |
++--------------------------------+
+| + getNome(): String            |
+| + getDescricao(): String       |
+| + setDescricao(descricao: String): void |
++--------------------------------+
+
 </pre>
